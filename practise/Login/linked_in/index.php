@@ -1,0 +1,1 @@
+<a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=81fnzlpte0oj7q&redirect_uri=http://localhost/practise/linked_in/success.php&state=987654321&scope=r_basicprofile"> click me</a>

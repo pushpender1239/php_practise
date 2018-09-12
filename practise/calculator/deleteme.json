@@ -1,0 +1,78 @@
+{
+    "status": true,
+    "message": "Test series report.",
+    "data": {
+        "id": "3257",
+        "test_series_id": "11",
+        "user_id": "1",
+        "result": "0",
+        "question_dump": "[{\"answer\":\"3\",\"question_id\":\"58\",\"is_correct\":\"0\"},{\"answer\":\"2\",\"question_id\":\"61\",\"is_correct\":\"1\"},{\"answer\":\"4\",\"question_id\":\"63\",\"is_correct\":\"0\"},{\"answer\":\"2\",\"question_id\":\"64\",\"is_correct\":\"0\"}]",
+        "time_spent": "11",
+        "correct_count": "1",
+        "incorrect_count": "3",
+        "non_attempt": "0",
+        "marks": "-2",
+        "test_series_marks": "5",
+        "total_test_series_time": "10",
+        "reward_points": "0",
+        "first_attempt": "0",
+        "creation_time": "1531985518752",
+        "test_series_name": "Gastrointestinal Stromal Tumour (GIST)",
+        "test_type": "2",
+        "skip_rank": "0",
+        "total_user_attempt": "365",
+        "user_rank": "339",
+        "top_ten_list": [{
+            "user_id": "29381",
+            "creation_time": "1522181409581",
+            "name": "Shabbir Ahmed",
+            "profile_picture": ""
+        }, {
+            "user_id": "42736",
+            "creation_time": "1522562480123",
+            "name": "Cifran Waris",
+            "profile_picture": "https:\/\/s3-ap-south-1.amazonaws.com\/dams-apps-production\/profile_images\/3E3EEEF1-3E32-4E47-9A4B-3BEB80DAC633-346-0000005153F0900F.png"
+        }, {
+            "user_id": "6635",
+            "creation_time": "1522841700768",
+            "name": "Devank Shah",
+            "profile_picture": ""
+        }, {
+            "user_id": "15203",
+            "creation_time": "1522971800488",
+            "name": "Neha",
+            "profile_picture": ""
+        }, {
+            "user_id": "29391",
+            "creation_time": "1522992535577",
+            "name": "Sathish Kumar",
+            "profile_picture": ""
+        }, {
+            "user_id": "36447",
+            "creation_time": "1523000589361",
+            "name": "Anujay Menon",
+            "profile_picture": ""
+        }, {
+            "user_id": "40045",
+            "creation_time": "1523030716545",
+            "name": "Jyoti Pradhan",
+            "profile_picture": ""
+        }, {
+            "user_id": "27916",
+            "creation_time": "1523040583090",
+            "name": "Maitri",
+            "profile_picture": ""
+        }, {
+            "user_id": "29654",
+            "creation_time": "1523430302702",
+            "name": "Ganesh Reddy Gyani",
+            "profile_picture": "https:\/\/s3.ap-south-1.amazonaws.com\/dams-apps-production\/profile_images\/29654_1528966720529_image.jpg"
+        }, {
+            "user_id": "47284",
+            "creation_time": "1523605907842",
+            "name": "Sujit Bharat Ghodke",
+            "profile_picture": "https:\/\/s3.ap-south-1.amazonaws.com\/dams-apps-production\/profile_images\/47284_1523334935425_image.jpg"
+        }]
+    },
+    "error": []
+}
