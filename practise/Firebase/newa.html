@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+        <!-- Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+</head>
+<script>
+     var config = {
+                apiKey: "AIzaSyDPbzpSJp8E4s7WScec5K7OfgaDocP9g8k",
+                authDomain: "fitindia-ecc0c.firebaseapp.com",
+                databaseURL: "https://fitindia-ecc0c.firebaseio.com",
+                projectId: "fitindia-ecc0c",
+                storageBucket: "fitindia-ecc0c.appspot.com",
+                messagingSenderId: "59285341561"
+            };
+            firebase.initializeApp(config);
+  
+
+var app = angular.module("sampleApp", ["firebase"]);
+
+ app.controller("SampleCtrl", ["$scope", "$firebaseArray", "$firebaseObject",
+  function($scope, $firebaseArray, $firebaseObject) {
+    var ref = firebase.database().ref();
+    //var messagesRef = ref.child("1");
+    //var query = messagesRef.orderByChild("date").limitToLast(1);
+
+    var dataK = $firebaseObject(ref);
+	$scope.dataK = dataK;
+	console.log(dataK)
+  
+  
+  $scope.newChil = function(cn){
+    var ref = firebase.database().ref();
+    var messagesRef = ref.child("1");
+    var query = messagesRef.orderByChild("date").limitToLast(1);
+
+    $scope.data = $firebaseArray(query);
+	}
+  }
+]);
+  
+  
+</script>
+<html ng-app="sampleApp">
+  <body ng-controller="SampleCtrl">
+   {{dataK.length}}
+   <ul>
+   <li ng-repeat="d in dataK" ng-load="">
+    </li>
+	</ul>
+	
+	
+  </body>
+</html>

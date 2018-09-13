@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+        <!-- Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script>
+var config = {
+    apiKey: "AIzaSyDPbzpSJp8E4s7WScec5K7OfgaDocP9g8k",
+    authDomain: "fitindia-ecc0c.firebaseapp.com",
+    databaseURL: "https://fitindia-ecc0c.firebaseio.com",
+    projectId: "fitindia-ecc0c",
+    storageBucket: "fitindia-ecc0c.appspot.com",
+    messagingSenderId: "59285341561"
+};
+firebase.initializeApp(config);
+var database = firebase.database();
+var ref = database.ref();
+ref.on("value", gotData);
+function gotData(data) {
+  var users = data.val();
+  var keys = Object.keys(users);
+  
+//console.log(keys);
+$("#detail").html("");
+  for (var i = 0; i < keys.length; i++) {
+    var key = keys[i];
+	if(key == "user")
+	break;
+    // Look at each fruit object!
+    var user = users[key].id;
+	//console.log(key);
+	var countvalue = database.ref().child(key);
+	countvalue.on("value", countdata);
+	function countdata(cdata){
+	
+		var cdn = Object.keys(cdata.val());
+		var cdnn = cdn.length;
+	
+	var newref = database.ref().child(key).orderByChild("date").limitToLast(1);
+	newref.on("value", childData);
+	function childData(datan){
+		var u = datan.val();
+		var k = Object.keys(u);
+		//console.log(u);
+
+		
+		for(var j = 0; j < k.length ; j++){
+			var ke = k[j];
+			
+			var id = u[ke].id;
+			var name = u[ke].name;
+			var date = u[ke].date;
+			if(id == "000"){
+				id = "";
+				name = "";
+				date ="";
+				cdnn = "";
+			}
+			$("#detail").append("<tr><td>" + id + "</td> <td>" + name + "</td><td> " + date +"</td><td>"+ cdnn +"</td></tr>");
+			
+			console.log(id, name, date);
+		}
+	}}
+  }
+}
+			
+</script>
+<body>
+<table id="detail">
+
+</table>
+</body>
+
