@@ -28,11 +28,14 @@ $("#save").on('click',(function(){
 var formData = new FormData(this);
 var file = [];
 var file_count = document.getElementById('img').files.length;
-
+    
+//var file = document.getElementById('profile-img').files[0]; in case of single image
+    
 // ===============when there is multiple field in form data with file=================we use this
 
 for(let i=0;i<file_count;i++)
 {
+    
   file[i] = document.getElementById('img').files[i];
   formData.append('SelectedFile'+[i], file[i]);
 
